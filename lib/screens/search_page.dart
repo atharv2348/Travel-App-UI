@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travel_app/constants/custom_colors.dart';
 import 'package:travel_app/constants/raw_data.dart';
 import 'package:travel_app/utils/custom_animations.dart';
+import 'package:travel_app/constants/custom_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchPage extends StatelessWidget {
   SearchPage({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travel_app/constants/custom_colors.dart';
 import 'package:travel_app/constants/raw_data.dart';
+import 'package:travel_app/constants/custom_colors.dart';
 import 'package:travel_app/utils/custom_animations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewPage extends StatelessWidget {
   ReviewPage({super.key});
@@ -202,7 +202,6 @@ class ReviewPage extends StatelessWidget {
                       delay: const Duration(milliseconds: 500)),
                 ],
               ),
-              // .fadeInSlideUp(delay: const Duration(milliseconds: 400)),
               SizedBox(height: 12.h),
               Expanded(
                 child: ListView.separated(
@@ -236,7 +235,6 @@ class ReviewPage extends StatelessWidget {
       return Positioned(
         left: offset.dx,
         top: offset.dy,
-        // width: size.width,
         child: Material(
           child: Container(
             height: 200,
@@ -328,7 +326,6 @@ class ReviewPage extends StatelessWidget {
           SizedBox(height: 12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

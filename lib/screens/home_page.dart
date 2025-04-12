@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:travel_app/constants/custom_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_app/constants/raw_data.dart';
 import 'package:travel_app/screens/review_page.dart';
 import 'package:travel_app/screens/search_page.dart';
+import 'package:travel_app/constants/custom_colors.dart';
 import 'package:travel_app/utils/custom_animations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -191,7 +191,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ).scaleBounceAniation(),
                   Positioned(
-                    bottom: -45.h, // <-- this is the key!
+                    bottom: -45.h, 
                     left: 20.w,
                     right: 20.w,
                     child: Align(
