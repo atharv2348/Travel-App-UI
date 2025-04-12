@@ -257,7 +257,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ).scaleBounceAniation(
-                      delay: const Duration(milliseconds: 800))
+                      delay: const Duration(milliseconds: 200))
                 ],
               ),
               SizedBox(height: 75.h),
