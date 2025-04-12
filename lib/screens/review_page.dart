@@ -6,9 +6,7 @@ import 'package:travel_app/utils/custom_animations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewPage extends StatelessWidget {
-  ReviewPage({super.key});
-
-  OverlayEntry? entry;
+  const ReviewPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -156,37 +154,28 @@ class ReviewPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      if (entry == null) {
-                        _showOverlay(context);
-                      } else {
-                        _removeOverlay();
-                      }
-                    },
-                    child: Container(
-                      padding: EdgeInsets.only(
-                        left: 16.w,
-                        right: 8.w,
-                        top: 8.h,
-                        bottom: 8.h,
-                      ),
-                      decoration: BoxDecoration(
-                          color: CustomColors.neutral7,
-                          borderRadius: BorderRadius.circular(8.r)),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text("Newest",
-                              style: TextStyle(
-                                  fontSize: 14.sp,
-                                  color: CustomColors.neutral1)),
-                          const Icon(
-                            Icons.arrow_drop_down_rounded,
-                            size: 30,
-                          ),
-                        ],
-                      ),
+                  Container(
+                    padding: EdgeInsets.only(
+                      left: 16.w,
+                      right: 8.w,
+                      top: 8.h,
+                      bottom: 8.h,
+                    ),
+                    decoration: BoxDecoration(
+                        color: CustomColors.neutral7,
+                        borderRadius: BorderRadius.circular(8.r)),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text("Newest",
+                            style: TextStyle(
+                                fontSize: 14.sp,
+                                color: CustomColors.neutral1)),
+                        const Icon(
+                          Icons.arrow_drop_down_rounded,
+                          size: 30,
+                        ),
+                      ],
                     ),
                   ).scaleBounceAniation(
                       delay: const Duration(milliseconds: 300)),
@@ -219,37 +208,6 @@ class ReviewPage extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _showOverlay(BuildContext context) {
-    entry = _createOverlayEntry(context);
-
-    Overlay.of(context).insert(entry!);
-  }
-
-  OverlayEntry? _createOverlayEntry(BuildContext context) {
-    final renderBox = context.findRenderObject() as RenderBox;
-    final offset = renderBox.localToGlobal(Offset.zero);
-
-    return OverlayEntry(builder: (context) {
-      return Positioned(
-        left: offset.dx,
-        top: offset.dy,
-        child: Material(
-          child: Container(
-            height: 200,
-            width: 200,
-            color: Colors.amber,
-            child: const Text("asd"),
-          ),
-        ),
-      );
-    });
-  }
-
-  void _removeOverlay() {
-    entry?.remove();
-    entry = null;
   }
 
   Widget buildComment(Map<String, dynamic> comment) {

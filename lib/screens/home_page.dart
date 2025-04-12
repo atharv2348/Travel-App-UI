@@ -54,7 +54,8 @@ class HomePage extends StatelessWidget {
                     width: 44.w,
                     decoration: const BoxDecoration(shape: BoxShape.circle),
                     child: Image.asset('assets/images/person.png'),
-                  ).scaleBounceAniation(delay: const Duration(milliseconds: 700)),
+                  ).scaleBounceAniation(
+                      delay: const Duration(milliseconds: 700)),
                   SizedBox(width: 12.w),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +192,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ).scaleBounceAniation(),
                   Positioned(
-                    bottom: -45.h, 
+                    bottom: -45.h,
                     left: 20.w,
                     right: 20.w,
                     child: Align(
@@ -300,7 +301,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ReviewPage(),
+                                builder: (context) => const ReviewPage(),
                               ));
                         },
                         child: Container(
